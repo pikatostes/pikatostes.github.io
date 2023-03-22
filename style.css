@@ -21,22 +21,71 @@ nav {
     padding: 1em;
 }
 nav h1 {
-    position: relative;
-    top: 10%;
+    font-size: xx-large;
     text-align: center;
 }
 
 article {
+    height: 70.2vh;
     grid-area: contenido;
     width: 70%;
     margin: auto;
     padding: 1em;
-    border: 2px red solid;
 }
 
 footer {
+    text-align: center;
     padding: 4em;
     grid-area: footer;
     background-color: black;
     color: white;
 }
+
+li {
+    list-style-type: none;
+    margin: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* pruebas
+.container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: .25s ease;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .container:hover .overlay {
+    opacity: 1;
+  }
+  
+  .overlay p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2vw;
+    text-align: center;
+  }
+
+  .container img {
+    width: fit-content;
+  }
+  */
