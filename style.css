@@ -21,6 +21,7 @@ nav {
     padding: 1em;
 }
 nav h1 {
+    margin: auto;
     font-size: xx-large;
     text-align: center;
 }
