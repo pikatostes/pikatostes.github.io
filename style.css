@@ -15,6 +15,9 @@ body {
 
 nav {
     grid-area: nav;
+    display: grid;
+    justify-items: center;
+    align-items: center;
     background-color: rgb(0, 0, 50);
     color: white;
     height: 5em;
@@ -49,10 +52,15 @@ li {
 
 a {
     text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .15s;
 }
 
-a:hover {
-    text-decoration: underline;
+a:hover, a:focus {
+    background-size: 100% 2px;
 }
 
 /* pruebas
