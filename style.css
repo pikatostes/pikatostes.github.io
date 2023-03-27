@@ -21,7 +21,6 @@ nav {
     align-items: center;
     background-color: rgb(0, 0, 50);
     color: white;
-    height: 5em;
     padding: 1em;
 }
 nav h1 {
@@ -31,7 +30,6 @@ nav h1 {
 }
 
 article {
-    height: 70.2vh;
     grid-area: contenido;
     width: 70%;
     margin: auto;
