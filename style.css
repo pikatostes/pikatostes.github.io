@@ -12,6 +12,7 @@ body {
     "contenido  contenido   contenido"
     "footer     footer      footer"
     ;
+    height: 100vh;
 }
 
 nav {
