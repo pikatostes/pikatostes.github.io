@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Poor Story
+- Font Author: Copyright (c) YoonDesign Inc. All Rights Reserved.
+- Font Source: http://fonts.gstatic.com/s/poorstory/v20/jizfREFUsnUct9P6cDfd4OmnLD0Z4zM.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))

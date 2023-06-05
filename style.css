@@ -1,102 +1,48 @@
-body {
-    margin: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+/* barra navegacion */
+.navbar {
+     padding: 2rem;
+     background-color: #f5f6f7;
 }
 
-#container {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-areas:
-    "nav        nav         nav"
-    "contenido  contenido   contenido"
-    "footer     footer      footer"
-    ;
-    height: 100vh;
+.navbar-collapse {
+     align-items: center;
+     justify-content: space-between;
 }
 
-nav {
-    grid-area: nav;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    background-color: rgb(0, 0, 50);
-    color: white;
-    padding: 1em;
-    height: 20vh;
-}
-nav h1 {
-    margin: auto;
-    font-size: xx-large;
-    text-align: center;
+/* Estilos generales */
+section {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
 }
 
-article {
-    grid-area: contenido;
-    width: 70%;
-    margin: auto;
-    padding: 1em;
-    height: 60vh;
+h1 {
+     font-size: 2.5rem;
+     font-family: ;
 }
 
-footer {
-    text-align: center;
-    padding: 4em;
-    grid-area: footer;
-    background-color: black;
-    color: white;
-    height: 20vh;
+/* Seccion Hero */
+.hero {
+     background-color: #f5f6f7;
+     min-height: 450px;
+     text-align: center;
 }
 
-li {
-    list-style-type: none;
-    margin: 10px;
+.hero-principal {
+     padding: 3rem;
 }
 
-a {
-    text-decoration: none;
-    background-image: linear-gradient(currentColor, currentColor);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 2px;
-    transition: background-size .15s;
+.hero-imagen-desarrollador {
+     width: 200px;
+     height: 200px;
+     border-radius: 50%;
+     margin: 20px;
 }
 
-a:hover, a:focus {
-    background-size: 100% 2px;
+/* Adaptable (Responsivo) */
+@media screen and (max-width: 767px) {
+     .navbar-brand {
+          display: none;
+     }
 }
-
-/* pruebas
-.container {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
-    transition: .25s ease;
-    background-color: rgba(0, 0, 0, 0.6);
-  }
-  
-  .container:hover .overlay {
-    opacity: 1;
-  }
-  
-  .overlay p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 2vw;
-    text-align: center;
-  }
-
-  .container img {
-    width: fit-content;
-  }
-  */
