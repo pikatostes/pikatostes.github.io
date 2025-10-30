@@ -1,28 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+
+<html lang="es">
 
 <head>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Alejandro Ríos | Desarrollador y Programador Web</title>
-     <style>
-          .container {
-               height: 100vh;
-               display: flex;
-               align-items: center;
-               justify-content: center;
-               flex-direction: column;
-               font-family: sans-serif;
-          }
-     </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Alejandro Ríos - Portfolio</title>
+    <meta name="description" content="Portfolio profesional - proyectos, educación y contacto" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-     <div class="container">
-          <h1>Actualmente la pagina está en mantenimiento</h1>
-          <h2>Pero puedes ver mi portfolio hecho para la asignatura de Diseño de Interfaces aquí: <a href="https://pikatostes.github.io/portfolio-bootstrap/">aquí</a></h2>
-     </div>
+    <div class="wrap">
+        <aside class="profile fade-in">
+            <div style="display:flex;gap:14px;align-items:center">
+                <div class="avatar" id="avatar">A</div>
+                <div style="flex:1">
+                    <h1 id="name">Alejandro Ríos</h1>
+                    <div class="title-sub">Desarrollador / Especialista en Ciberseguridad</div>
+                </div>
+            </div>
+
+            <div>
+                <div class="pill">🔗 <a id="github-link" href="https://github.com/pikatostes">github.com/TU_USUARIO</a></div>
+            </div>
+
+            <div>
+                <h4 style="margin:0 0 8px 0">Sobre mí</h4>
+                <p style="margin:0;color:var(--muted);font-size:14px;line-height:1.4">Soy desarrollador con formación en
+                    DAW (2022-2024) y especialista en Ciberseguridad (2024-2025). Actualmente cursando DAM por las
+                    tardes. Me apasiona crear aplicaciones web limpias, seguras y con buen UX.</p>
+            </div>
+
+            <div>
+                <h4 style="margin:0 0 8px 0">Habilidades</h4>
+                <div class="skills">
+                    <img src="https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white" alt="HTML5" class="skill"/>
+                    <img src="https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white" alt="CSS3" class="skill"/>
+                    <img src="https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black" alt="JavaScript" class="skill"/>
+                    <img src="https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white" alt="Python" class="skill"/>
+                    <img src="https://img.shields.io/badge/-Django-092E20?logo=django&logoColor=white" alt="Django" class="skill"/>
+                    <img src="https://img.shields.io/badge/-Git-F05032?logo=git&logoColor=white" alt="Git" class="skill"/>
+                    <img src="https://img.shields.io/badge/-Linux-FCC624?logo=linux&logoColor=black" alt="Linux" class="skill"/>
+                    <img src="https://img.shields.io/badge/-SQL-4479A1?logo=postgresql&logoColor=white" alt="SQL" class="skill"/>
+                </div>
+            </div>
+
+            <div>
+                <h4 style="margin:0 0 8px 0">Formación</h4>
+                <div class="edu">
+                    <strong>Desarrollo de Aplicaciones Multiplataforma</strong><br>Actualmente cursando<br>
+                    <strong>Especialización en Ciberseguridad</strong><br>2024 — 2025<br>
+                    <strong>Desarrollo de Aplicaciones Web</strong><br>2022 — 2024
+                </div>
+            </div>
+
+            <div style="margin-top:auto;display:flex;flex-direction:column;gap:8px">
+                <a id="download-resume" class="btn" href="https://github.com/pikatostes">Descargar CV</a>
+                <div style="font-size:12px;color:var(--muted)">Personaliza el nombre, enlace de GitHub y el CV en el
+                    código.</div>
+            </div>
+
+        </aside>
+
+        <main class="main fade-in" style="animation-delay:.08s">
+
+            <div class="controls">
+                <div style="display:flex;gap:10px;align-items:center">
+                    <h2 style="margin:0">Proyectos</h2>
+                    <div style="color:var(--muted);font-size:13px">Proyectos extraídos desde GitHub</div>
+                </div>
+
+                <div style="display:flex;gap:8px;align-items:center">
+                    <div class="search">
+                        <input id="search" placeholder="Filtrar por nombre o lenguaje..." />
+                    </div>
+                    <div class="pill" id="repo-count">0 repos</div>
+                </div>
+            </div>
+
+            <div class="projects" id="projects"></div>
+
+            <footer>
+                
+            </footer>
+
+        </main>
+
+    </div>
+    <script src="main.js"></script>
 </body>
 
 </html>
