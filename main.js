@@ -57,7 +57,7 @@
               <span>${new Date(r.updated_at).toLocaleDateString()}</span>
             </div>
             <div class="actions">
-              <a class="btn" href="${r.html_url}" target="_blank" rel="noopener">Ver</a>
+              <a class="btn" href="${r.html_url}" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>
               ${r.homepage ? `<a class="btn" href="${r.homepage}" target="_blank" rel="noopener">Demo</a>` : ''}
             </div>
           </div>
