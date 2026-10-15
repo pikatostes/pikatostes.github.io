@@ -2,121 +2,184 @@
 <html lang="es">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Alejandro Ríos - Portfolio</title>
-    <meta name="description" content="Portfolio profesional - proyectos, educación y contacto" />
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Alejandro Ríos · Desarrollador y especialista en ciberseguridad</title>
+    <meta name="description"
+        content="Portfolio de Alejandro Ríos: desarrollo web y multiplataforma con formación en ciberseguridad. Proyectos, formación y contacto.">
+    <meta name="theme-color" content="#0e1117">
+    <script>
+        (function () { try { var t = localStorage.getItem("theme"); if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; document.documentElement.dataset.theme = t } catch (e) { document.documentElement.dataset.theme = "dark" } })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="wrap">
-        <aside class="profile fade-in">
-            <div style="display:flex;gap:14px;align-items:center">
-                <div class="avatar" id="avatar">A</div>
-                <div style="flex:1">
-                    <h1 id="name">Alejandro Ríos</h1>
-                    <div class="title-sub">Desarrollador / Especialista en Ciberseguridad</div>
+    <header class="nav">
+        <div class="container nav-in">
+            <a class="logo" href="#top" aria-label="Inicio">AR</a>
+            <nav class="links" aria-label="Principal">
+                <a href="#sobre-mi">Sobre mí</a><a href="#stack">Stack</a><a href="#proyectos">Proyectos</a><a
+                    href="#formacion">Formación</a>
+            </nav>
+            <div class="nav-end">
+                <button id="theme" class="icon-btn" type="button" aria-label="Cambiar entre modo claro y oscuro">
+                    <svg class="i-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round">
+                        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+                    </svg>
+                    <svg class="i-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round">
+                        <circle cx="12" cy="12" r="4" />
+                        <path
+                            d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+                    </svg>
+                </button>
+                <a class="btn small" href="#contacto">Contacto</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="top">
+        <section class="hero container">
+            <div class="hero-text">
+                <p class="status"><span class="dot"></span>Disponible para nuevas oportunidades</p>
+                <h1>Desarrollo aplicaciones web y móviles pensando en la seguridad desde el primer commit.</h1>
+                <p class="lead">Soy Alejandro Ríos, desarrollador formado en DAW y recién graduado en DAM, especializado
+                    en ciberseguridad. <br> Construyo proyectos con PHP, React y Flutter.</p>
+                <div class="cta">
+                    <a class="btn" href="#proyectos">Ver proyectos</a>
+                    <a class="btn ghost" href="cv.pdf" download>Descargar CV</a>
+                    <a class="btn ghost" href="mailto:alejandro.rios.cyt@gmail.com">Escribirme</a>
                 </div>
             </div>
+            <figure class="term" aria-label="Resumen de perfil en formato terminal">
+                <div class="term-bar"><span></span><span></span><span></span><b>perfil.sh</b></div>
+                <pre><span class="c">$</span> whoami
+alejandro.rios
 
-            <div>
-                <div class="pill">📧 <a id="email-link"
-                        href="mailto:alejandro.rios.cyt@gmail.com">alejandro.rios.cyt@gmail.com</a></div>
-                <div class="pill">🔗 <a id="github-link" href="https://github.com/pikatostes">github.com/TU_USUARIO</a>
+<span class="c">$</span> cat perfil.txt
+rol      desarrollador full-stack
+foco     seguridad y buenas prácticas
+backend  PHP · Symfony · Laravel · Python
+frontend React · JavaScript
+móvil    Flutter · Kotlin
+estudios DAM (en curso)
+
+<span class="c">$</span> <span class="caret"></span></pre>
+            </figure>
+        </section>
+
+        <section id="sobre-mi" class="container sec">
+            <h2>Sobre mí</h2>
+            <div class="about">
+                <div>
+                    <p>Me apasiona crear aplicaciones limpias, seguras y con buena experiencia de usuario. Empecé en el
+                        desarrollo web (DAW, 2022–2024), reforcé la parte defensiva con una especialización en
+                        ciberseguridad (2024–2025) y terminado con el desarrollo de apps móviles (DAM, 2025–2026).
+                    </p><br>
+                    <p>Actualmente, me encuentro estudiando los usos e implementaciones de la IA en PYMES, pensando siempre
+                        en mejorar la seguridad y de ahorrar tiempo y dinero.</p>
+                </div>
+                <ul class="facts">
+                    <li><strong>3+</strong><span>años de formación continuada en desarrollo</span></li>
+                    <li><strong>Web + móvil</strong><span>de la base de datos a la interfaz</span></li>
+                    <li><strong>Seguridad</strong><span>presente en el diseño, no al final</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="stack" class="container sec">
+            <h2>Stack</h2>
+            <div class="stack">
+                <div>
+                    <h3>Frontend</h3>
+                    <ul class="chips">
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Backend</h3>
+                    <ul class="chips">
+                        <li>PHP</li>
+                        <li>Symfony</li>
+                        <li>Laravel</li>
+                        <li>Python</li>
+                        <li>Java</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Móvil</h3>
+                    <ul class="chips">
+                        <li>Flutter</li>
+                        <li>Kotlin</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Datos y sistemas</h3>
+                    <ul class="chips">
+                        <li>MySQL</li>
+                        <li>Docker</li>
+                        <li>Linux</li>
+                        <li>Windows</li>
+                        <li>Git</li>
+                    </ul>
                 </div>
             </div>
+        </section>
 
-            <div>
-                <h4 style="margin:0 0 8px 0">Sobre mí</h4>
-                <p style="margin:0;color:var(--muted);font-size:14px;line-height:1.4">Soy desarrollador con formación en
-                    DAW (2022-2024) y especialista en Ciberseguridad (2024-2025). Actualmente cursando DAM por las
-                    tardes. Me apasiona crear aplicaciones web limpias, seguras y con buen UX.</p>
-            </div>
-
-            <div>
-                <h4 style="margin:0 0 8px 0">Habilidades</h4>
-                <div class="skills">
-                    <img src="https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white" alt="HTML5"
-                        class="skill" />
-                    <img src="https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white" alt="CSS3"
-                        class="skill" />
-                    <img src="https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black"
-                        alt="JavaScript" class="skill" />
-                    <img src="https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white" alt="Python"
-                        class="skill" />
-                    <img src="https://img.shields.io/badge/-Git-F05032?logo=git&logoColor=white" alt="Git"
-                        class="skill" />
-                    <img src="https://img.shields.io/badge/-Linux-FCC624?logo=linux&logoColor=black" alt="Linux"
-                        class="skill" />
-                    <img src="https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white" alt="Docker"
-                        class="skill" />
-                    <img src="https://img.shields.io/badge/-Windows-0078D6?logo=windows&logoColor=white" alt="Windows"
-                        class="skill" />
-                    <img src="https://img.shields.io/badge/-PHP-777BB4?logo=php&logoColor=white" alt="PHP"
-                        class="skill" />
-                    <img src="https://img.shields.io/badge/-MySQL-4479A1?logo=mysql&logoColor=white" alt="MySQL"
-                        class="skill" />
-                    <!-- Java, react, kotlin, flutter, symfony -->
-                    <img src="https://img.shields.io/badge/-Java-007396?logo=java&logoColor=white" alt="Java"
-                        class="skill" />
-                    <img src="https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=black" alt="React"
-                        class="skill" />
-                    <img src="https://img.shields.io/badge/-Kotlin-0095D5?logo=kotlin&logoColor=white" alt="Kotlin"
-                        class="skill" />
-                    <img src="https://img.shields.io/badge/-Flutter-02569B?logo=flutter&logoColor=white" alt="Flutter"
-                        class="skill" />
-                    <img src="https://img.shields.io/badge/-Symfony-000000?logo=symfony&logoColor=white" alt="Symfony"
-                        class="skill" />
+        <section id="proyectos" class="container sec">
+            <div class="sec-head">
+                <div>
+                    <h2>Proyectos</h2>
+                    <p class="muted">Repositorios públicos, actualizados desde GitHub. <span id="repo-count"></span></p>
                 </div>
+                <label class="search"><span class="sr">Filtrar proyectos</span><input id="search" type="search"
+                        placeholder="Buscar por nombre o lenguaje"></label>
             </div>
+            <div id="filters" class="chips filters" role="group" aria-label="Filtrar por lenguaje"></div>
+            <div id="projects" class="projects" aria-live="polite"></div>
+        </section>
 
-            <div>
-                <h4 style="margin:0 0 8px 0">Formación</h4>
-                <div class="edu">
-                    <strong>Desarrollo de Aplicaciones Multiplataforma</strong><br>Actualmente cursando<br><br
-                    <strong>Especialización en Ciberseguridad</strong><br>2024 — 2025<br><br
-                    <strong>Desarrollo de Aplicaciones Web</strong><br>2022 — 2024
-                </div>
+        <section id="formacion" class="container sec">
+            <h2>Formación</h2>
+            <ol class="timeline">
+                <li><time>2025 – 2026</time>
+                    <h3>Desarrollo de Aplicaciones Multiplataforma</h3>
+                    <p>Ciclo superior en horario de tarde. Apps móviles y de escritorio, bases de datos y servicios.</p>
+                </li>
+                <li><time>2024 – 2025</time>
+                    <h3>Especialización en Ciberseguridad</h3>
+                    <p>Seguridad defensiva, administración de sistemas y buenas prácticas aplicadas al desarrollo.</p>
+                </li>
+                <li><time>2022 – 2024</time>
+                    <h3>Desarrollo de Aplicaciones Web</h3>
+                    <p>Desarrollo full-stack: HTML, CSS, JavaScript, PHP y bases de datos relacionales.</p>
+                </li>
+            </ol>
+        </section>
+
+        <section id="contacto" class="container sec contact">
+            <h2>¿Hablamos?</h2>
+            <p class="lead">Si buscas a alguien que se tome en serio tanto el código como su seguridad, escríbeme.</p>
+            <div class="cta">
+                <a class="btn" href="mailto:alejandro.rios.cyt@gmail.com">alejandro.rios.cyt@gmail.com</a>
+                <a class="btn ghost" href="https://github.com/pikatostes" target="_blank" rel="noopener">GitHub</a>
+                <a class="btn ghost" href="alejandro-rios-cv-sp.pdf" download>Descargar CV</a>
             </div>
+        </section>
+    </main>
 
-            <div style="margin-top:auto;display:flex;flex-direction:column;gap:8px">
-                <a id="download-resume" class="btn" download="alejandro-rios-cv-sp.pdf">Descargar CV</a>
-            </div>
-
-        </aside>
-
-        <main class="main fade-in" style="animation-delay:.08s">
-
-            <div class="controls">
-                <div style="display:flex;gap:10px;align-items:center">
-                    <h2 style="margin:0">Proyectos</h2>
-                    <div style="color:var(--muted);font-size:13px">extraídos desde GitHub</div>
-                </div>
-
-                <div style="display:flex;gap:8px;align-items:center">
-                    <div class="search">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"
-                            fill="currentColor" class="icon-search">
-                            <path d="M21 21l-4.35-4.35m1.85-5.4a7.25 7.25 0 11-14.5 0 7.25 7.25 0 0114.5 0z"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        <input id="search" type="text" placeholder="Buscar" />
-                    </div>
-
-                    <div class="pill" id="repo-count">0 repos</div>
-                </div>
-            </div>
-
-            <div class="projects" id="projects"></div>
-
-            <footer>
-
-            </footer>
-
-        </main>
-
-    </div>
+    <footer class="container foot"><span>© <span id="year"></span> Alejandro Ríos</span><a href="#top">Volver arriba</a>
+    </footer>
     <script src="main.js"></script>
 </body>
 
