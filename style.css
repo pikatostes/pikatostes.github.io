@@ -77,6 +77,8 @@ p{margin:0}a{color:inherit}
 .projects{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1rem}
 .card{display:flex;flex-direction:column;gap:.7rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.2rem;transition:border-color .2s}
 .card:hover{border-color:var(--accent)}
+.card.has-bg{background-image:linear-gradient(color-mix(in srgb,var(--surface) 78%,transparent),color-mix(in srgb,var(--surface) 93%,transparent)),var(--card-bg);background-size:cover;background-position:center;background-repeat:no-repeat}
+.card.has-bg:hover{background-image:linear-gradient(color-mix(in srgb,var(--surface) 68%,transparent),color-mix(in srgb,var(--surface) 88%,transparent)),var(--card-bg)}
 .card h3{font-size:1.1rem;word-break:break-word}
 .card p{color:var(--muted);font-size:.94rem;flex:1}
 .card .meta{display:flex;flex-wrap:wrap;gap:.9rem;font-size:.83rem;color:var(--muted)}

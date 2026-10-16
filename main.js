@@ -25,6 +25,23 @@ const box = $("#projects");
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const fmt = (d) => new Date(d).toLocaleDateString("es-ES", { month: "short", year: "numeric" });
 
+// Imagen de fondo opcional: <nombreRepositorio>.png en la raíz del repositorio de GitHub
+const bgCache = new Map();
+function setCardBg(card, name, branch) {
+  const url = `https://raw.githubusercontent.com/${USER}/${encodeURIComponent(name)}/${encodeURI(branch || "main")}/${encodeURIComponent(name)}.png`;
+  const apply = () => {
+    card.classList.add("has-bg");
+    card.style.setProperty("--card-bg", `url("${url}")`);
+  };
+  const known = bgCache.get(url);
+  if (known === true) return apply();
+  if (known === false) return;
+  const img = new Image();
+  img.onload = () => { bgCache.set(url, true); apply(); };
+  img.onerror = () => bgCache.set(url, false);
+  img.src = url;
+}
+
 function render() {
   const q = query.toLowerCase();
   const list = repos.filter((r) =>
@@ -33,7 +50,7 @@ function render() {
   $("#repo-count").textContent = `${list.length} de ${repos.length} repos`;
   if (!list.length) { box.innerHTML = '<p class="empty">Ningún proyecto coincide con el filtro.</p>'; return; }
   box.innerHTML = list.map((r) => `
-    <article class="card">
+    <article class="card" data-repo="${esc(r.name)}" data-branch="${esc(r.default_branch)}">
       <h3>${esc(r.name)}</h3>
       <p>${esc(r.description) || "Sin descripción todavía."}</p>
       <div class="meta">
@@ -47,6 +64,7 @@ function render() {
         ${r.homepage ? `<a href="${esc(r.homepage)}" target="_blank" rel="noopener">Demo</a>` : ""}
       </div>
     </article>`).join("");
+  box.querySelectorAll(".card[data-repo]").forEach((card) => setCardBg(card, card.dataset.repo, card.dataset.branch));
 }
 
 function filters() {
